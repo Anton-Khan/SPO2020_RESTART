@@ -12,17 +12,16 @@ namespace Language
         static void Main(string[] args)
         {
 
-            string input = File.ReadAllText(@"C:\Users\Khan\source\repos\mirea\SPO_RESTART\Language\Language\INPUT.txt");
-
+            string input = File.ReadAllText(@"C:\Users\Khan\source\repos\mirea\SPO_RESTART\Language\SPO2020_RESTART\Language\INPUT.txt");
 
             
-
             Lexer lex = new Lexer(input);
+            
             var tokens = lex.returnTokens();
 
 
             Parser p = new Parser(tokens);
-            Console.WriteLine("Parser\n");
+            Console.WriteLine("Работа Парсера\n");
             p.lang();
 
 
@@ -38,7 +37,7 @@ namespace Language
             {
                 Console.Write(item.value + "  ");
             }
-            Console.WriteLine("\n\nProgramm->");
+            Console.WriteLine("\n\nВыполнение программы->");
 
 
             StackMachine st = new StackMachine();
@@ -46,7 +45,7 @@ namespace Language
 
             Console.WriteLine("______________________");
             Console.WriteLine();
-            Console.WriteLine("End Values->");
+            Console.WriteLine("Конечные значения переменных->");
 
             Console.WriteLine();
             foreach (KeyValuePair<string, object> var in st.Variables)

@@ -10,6 +10,7 @@ namespace Language
 
         public Lexer(string inputString)
         {
+            Console.WriteLine("\n\n" + inputString + "\n");
             this.inputString = inputString.Replace("\r\n", "");
             this.inputString = this.inputString.Replace("\t", "");
             
@@ -84,9 +85,9 @@ namespace Language
 
             }
 
-            Console.WriteLine("\n\n" + inputString + "\n");
+            
             int count = 0;
-            Console.WriteLine("Lexer\n");
+            Console.WriteLine("Работа Лексера\n");
             foreach (var t in result)
             {
                 Console.WriteLine(count + " ->\t" + t.value + "\t(" + t.lexem + ")");

@@ -8,10 +8,6 @@ if_expr -> IF_KW if_head if_body
 
 while_expr -> WHILE_KW while_head while_body
 
-
-
-
-
 value -> VAR(DOT list_get_func)?|DIGIT|bracket_body
 
 value_expr -> value (OP value)* 
@@ -22,16 +18,12 @@ sq_braket_body -> L_SB expr+ R_SB
 
 logic_comp -> value_expr COMPARE_OP value_expr
 
-
 if_head -> L_B logic_comp R_B
 if_body -> sq_braket_body (else_expr)*
 else_expr -> ELSE_KW ( if_expr | sq_braket_body)
 
-
 while_head -> L_B logic_comp R_B
 while_head -> sq_braket_body
-
-
 
 new_list -> LIST_KW VAR SEMICOLON
 list_func -> DOT l_func SEMICOLON
@@ -54,9 +46,6 @@ new_HT -> HT_KW VAR SEMICOLON
 search_func -> SEARCH_KW func_body
 
 
-
-
-
 LIST_KW -> ^List$
 ADD_KW -> ^Add$
 IS_EMPTY_KW -> ^IsEmpty$
@@ -67,13 +56,10 @@ GET_VALUE_KW -> ^GetValue$
 GET_INDEX_KW -> ^GetIndex$
 COUNT_KW -> ^Count$
 
-
 HT_KW -> ^HashTable$
 SEARCH_KW -> ^Search$
 
-
 func_body -> L_B value R_B
-
 
 SEMICOLON -> ^;$
 VAR -> ^([a-zA-Z]+)$
@@ -90,6 +76,14 @@ R_SB -> ^\}$
 COMPARE_OP -> ^(>=|<=|>|<|!=|==)$
 DOT_KW -> ^\.$
 COMMA_KW -> ^,$
+
+OUT_KW -> "^out$"
+
+END -> $
+F_T -> !F
+UNC_T -> !
+
+FUNC -> <-->
 
 
 

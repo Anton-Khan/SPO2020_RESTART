@@ -208,14 +208,15 @@ namespace Language
                     }
                 }
 
-                //throw new VariableNotFoundException((string)stack.Peek());
-                Console.WriteLine("throw new VariableNotFoundException((string)stack.Peek());");
+                throw new Exception((string)stack.Peek());
+                //Console.WriteLine("throw new VariableNotFoundException((string)stack.Peek());");
                 return 0;
             }
 
             
-            //throw new TypeNotRecognizedException(stack.Peek());
-            Console.WriteLine("throw new TypeNotRecognizedException(stack.Peek());");
+            throw new Exception((string)stack.Peek());
+
+            //Console.WriteLine("throw new TypeNotRecognizedException(stack.Peek());");
             return 0;
         }
 

@@ -5,3 +5,10 @@ C:\Users\Khan\source\repos\mirea\SPO_RESTART\Language\Language\bin\Debug\Languag
 C:\Users\Khan\source\repos\mirea\SPO_RESTART\Language\Language\bin\Debug\Language.pdb
 C:\Users\Khan\source\repos\mirea\SPO_RESTART\Language\Language\obj\Debug\Language.exe
 C:\Users\Khan\source\repos\mirea\SPO_RESTART\Language\Language\obj\Debug\Language.pdb
+C:\Users\Khan\source\repos\mirea\SPO_RESTART\Language\SPO2020_RESTART\Language\bin\Debug\Language.exe.config
+C:\Users\Khan\source\repos\mirea\SPO_RESTART\Language\SPO2020_RESTART\Language\bin\Debug\Language.exe
+C:\Users\Khan\source\repos\mirea\SPO_RESTART\Language\SPO2020_RESTART\Language\bin\Debug\Language.pdb
+C:\Users\Khan\source\repos\mirea\SPO_RESTART\Language\SPO2020_RESTART\Language\obj\Debug\Language.csprojAssemblyReference.cache
+C:\Users\Khan\source\repos\mirea\SPO_RESTART\Language\SPO2020_RESTART\Language\obj\Debug\Language.csproj.CoreCompileInputs.cache
+C:\Users\Khan\source\repos\mirea\SPO_RESTART\Language\SPO2020_RESTART\Language\obj\Debug\Language.exe
+C:\Users\Khan\source\repos\mirea\SPO_RESTART\Language\SPO2020_RESTART\Language\obj\Debug\Language.pdb
