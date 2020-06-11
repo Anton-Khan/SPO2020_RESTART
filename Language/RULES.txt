@@ -1,0 +1,95 @@
+﻿	new	
+lang -> expr+
+expr -> assign_expr|if_expr|while_expr|new_list|list_func
+
+assign_expr -> VAR ASSIGN_OP value_expr SEMICOLON
+
+if_expr -> IF_KW if_head if_body
+
+while_expr -> WHILE_KW while_head while_body
+
+
+
+
+
+value -> VAR(DOT list_get_func)?|DIGIT|bracket_body
+
+value_expr -> value (OP value)* 
+
+bracket_body -> L_B value_expr R_B
+
+sq_braket_body -> L_SB expr+ R_SB
+
+logic_comp -> value_expr COMPARE_OP value_expr
+
+
+if_head -> L_B logic_comp R_B
+if_body -> sq_braket_body (else_expr)*
+else_expr -> ELSE_KW ( if_expr | sq_braket_body)
+
+
+while_head -> L_B logic_comp R_B
+while_head -> sq_braket_body
+
+
+
+new_list -> LIST_KW VAR SEMICOLON
+list_func -> DOT l_func SEMICOLON
+func -> add_func | insert_at_func | clear_func | display_func | delete_at_func | list_get_func 
+add_func -> ADD_KW func_body
+insert_at_func -> INSERT_KW L_B value_expr COMMA_KW value_expr R_B 
+display_func -> DISPLAY_KW L_B R_B 
+delete_at_func -> DELETE_AT_KW func_body
+clear_func -> CLEAR_KW L_B R_B
+
+
+list_get_func -> get_value_func | get_index_func | count | isEmpty_func | search_func
+count -> COUNT_KW L_B R_B
+get_value_func -> GET_VALUE_KW func_body
+get_index_func -> GET_INDEX_KW func_body
+isEmpty_func -> IS_EMPTY_KW L_B R_B 
+
+
+new_HT -> HT_KW VAR SEMICOLON
+search_func -> SEARCH_KW func_body
+
+
+
+
+
+LIST_KW -> ^List$
+ADD_KW -> ^Add$
+IS_EMPTY_KW -> ^IsEmpty$
+CLEAR_KW -> ^Clear$
+DISPLAY_KW -> ^Display$
+DELETE_AT_KW -> ^DeleteAt$
+GET_VALUE_KW -> ^GetValue$
+GET_INDEX_KW -> ^GetIndex$
+COUNT_KW -> ^Count$
+
+
+HT_KW -> ^HashTable$
+SEARCH_KW -> ^Search$
+
+
+func_body -> L_B value R_B
+
+
+SEMICOLON -> ^;$
+VAR -> ^([a-zA-Z]+)$
+DIGIT -> ^(0|[1-9][0-9]*)$
+ASSIGN_OP -> ^=$
+OP -> ^(\+|-|\*|\/)$
+IF_KW -> ^if$
+WHILE_KW -> ^while$
+FOR_KW -> ^for$
+L_B -> ^\($
+R_B -> ^\)$
+L_SB -> ^\{$
+R_SB -> ^\}$
+COMPARE_OP -> ^(>=|<=|>|<|!=|==)$
+DOT_KW -> ^\.$
+COMMA_KW -> ^,$
+
+
+

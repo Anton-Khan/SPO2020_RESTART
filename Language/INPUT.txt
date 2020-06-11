@@ -1,0 +1,49 @@
+﻿List list;
+HashTable ht;
+
+b=1;
+c=10;
+
+list.Insert(b, list.Count());
+list.Insert(c, list.Count());
+
+
+ht.Insert(45, 45);
+ht.Insert(34, 67);
+ht.Insert(23, 89);
+
+a = list.GetValue(0) + list.GetValue(1);
+
+d = ht.Search(34);
+
+
+ht.Display();
+
+list.Display();
+
+
+while(c > b){
+
+	if((c - b) > 5){
+		
+		list.Insert(b, list.Count());
+	
+	}else{
+		if( b == 6){
+		
+			ht.Insert(b, b);
+		}
+	}
+	
+
+	b= b + 1;
+}
+
+
+list.Display();
+ht.Display();
+
+
+inf = ((1 * 2) + (3 * 4)*2)/2
+	
+	
