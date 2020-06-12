@@ -36,6 +36,8 @@ namespace Language
             catch (LangException e)
             {
                 Console.WriteLine(e.ToString());
+                Console.ReadLine();
+                Environment.Exit(-1);
             }
             catch (Exception ex)
             {
@@ -91,8 +93,8 @@ namespace Language
                                 {
                                    
                                     iterator--;
-                                    //Console.WriteLine("\t\tНичего не подошло в EXPR ->  " + (iterator - 1) + "\n\t\t\t" + ex.Message + "\n\t\t\t" + exc.Message + "\n\t\t\t" + excep.Message + "\n\t\t\t" + except.Message + "\n\t\t\t" + exception.Message + "\n\t\t\t" + hte.Message);
-                                    throw new LangException("Ничего не подошло в EXPR ->" + (iterator - 1) + "\n\t\t\t" + ex.Message + "\n\t\t\t" + exc.Message + "\n\t\t\t" + excep.Message + "\n\t\t\t" + except.Message + "\n\t\t\t" + exception.Message + "\n\t\t\t" + hte.Message);
+                                    Console.WriteLine("\t\tНичего не подошло в EXPR или Конец EXPRESSION ->  " + (iterator - 1) + "\n\t\t\t" + ex.Message + "\n\t\t\t" + exc.Message + "\n\t\t\t" + excep.Message + "\n\t\t\t" + except.Message + "\n\t\t\t" + exception.Message + "\n\t\t\t" + hte.Message);
+                                    throw new LangException("Ничего не подошло в EXPR или Конец EXPRESSION ->" + (iterator - 1) + "\n\t\t\t" + ex.Message + "\n\t\t\t" + exc.Message + "\n\t\t\t" + excep.Message + "\n\t\t\t" + except.Message + "\n\t\t\t" + exception.Message + "\n\t\t\t" + hte.Message);
 
                                     
                                 }
