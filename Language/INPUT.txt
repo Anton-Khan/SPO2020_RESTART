@@ -1,41 +1,36 @@
-﻿List list;
-HashTable ht;
+﻿List a;
+List b;
 
-b=1;
-c=10;
+i = 0;
+while(i < 10){
 
-list.Insert(b, list.Count());
-list.Insert(c, list.Count());
-
-ht.Insert(45, 45);
-ht.Insert(34, 67);
-ht.Insert(23, 89);
-
-a = list.GetValue(0) + list.GetValue(1);
-d = ht.Search(34);
-
-ht.Display();
-
-list.Display();
-
-while(c > b){
-	if((c - b) > 5){
-		
-		list.Insert(b, list.Count());
-	
-	}else{
-		if( b == 6){
-		
-			ht.Insert(b, d*b);
-		}
-	}
-	b= b + 1;
+	a.Insert(i,i);
+	b.Insert(i*i, i);
+	i= i+1;
 }
 
+a.Display();
+b.Display();
 
-list.Display();
-ht.Display();
+HashTable h;
 
-inf = ((1 * 2) + (3 * 4)*2)/2;
-	
+i=0;
+while(i < a.Count()){
+
+	h.Insert(a.GetValue(i), b.GetValue(i));
+	i= i+1;
+}
+
+h.Display();
+
+
+h.DeleteAt(1);
+h.DeleteAt(3);
+h.DeleteAt(5);
+
+h.Display();
+
+
+serach = h.Search(7);
+
 	
