@@ -11,4 +11,7 @@
 ![](Error_check.gif)
 
 
+LinkedList + HashTable 
 
+
+![](List+Hash.gif)
