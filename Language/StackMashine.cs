@@ -209,15 +209,13 @@ namespace Language
                 }
 
                 throw new Exception((string)stack.Peek());
-                //Console.WriteLine("throw new VariableNotFoundException((string)stack.Peek());");
-                return 0;
+                
             }
 
             
             throw new Exception((string)stack.Peek());
 
-            //Console.WriteLine("throw new TypeNotRecognizedException(stack.Peek());");
-            return 0;
+            
         }
 
         private double executeArithmeticOperation(double param1, double param2, string op)
